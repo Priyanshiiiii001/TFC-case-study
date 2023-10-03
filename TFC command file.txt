@@ -1,0 +1,244 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{pgf-pie}
+\usepackage{pgfplots} 
+\usetikzlibrary{patterns}
+\usepackage{layout}
+\usepackage[english]{babel}
+\usepackage{ragged2e}
+\usepackage{blindtext}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\definecolor{bblue}{HTML}{4F81BD}
+\definecolor{rred}{HTML}{C0504D}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=15mm, right=15mm,
+ top=10mm,
+ }
+\centering
+\title{\textbf{The Fashion Channel\\ Case Study}}
+\author{Submitted By: \textbf{Priya Rani}}
+\date{Submitted on: 2nd October 2023}
+
+\begin{document}
+
+\maketitle
+\break
+\section{Introduction}
+\RaggedRight
+\subsection{The Problem Statement}
+
+\textbf{The Fashion Channel}, a cable television network is facing competition from its Competitors such as CNN and Lifetime because of its no target and old strategy which was never changed since its beginning . Women between 35 and 54 were its most avid viewers, according to annual demographic survey but TFC doesn't have much detailed information about its viewers others than the demographic survey.so, Dana Wheeler, senior vice president of marketing is given the task to \textbf{Develop an analysis of the segmentation options and to evaluate the Pros and Cons}.\\
+TFC might need to drop the price for a unit of advertising next year by 10 \% if urgent changes in its performance not made.\\
+From viewer demographics, the Average Households rating of TFC is very low when compared to its competitors i.e CNN and Lifetime.\\
+The TFC needs to change its Marketing strategies as it will provide more growth opportunities.
+
+
+\subsection{Segmentation Options:}
+After analyzing the data, Wheeler found it would be unwise target the Basic Cluster(all men) which is less likely to engage with TFC.Instead TFC should focus on premium customers\textbf{(women aged between 18-34)}. so, she found three segments that should be targeted.\\
+
+\hspace{3cm}
+
+\centering
+
+\hspace{4cm}
+
+\begin{tikzpicture}
+  \pie[polar]{15/Fashionistas, 35/Planners \& Shoppers, 30/Situationalists, 20/Basics}
+\end{tikzpicture}
+
+\Raggedcenter 
+Fig 1.1
+\break
+%
+\hspace{3cm}
+%
+\begin{tikzpicture}
+    \begin{axis}[
+        width  = 0.85*\textwidth,
+        height = 8cm,
+        major x tick style = transparent,
+        ybar=2*\pgflinewidth,
+        bar width=14pt,
+        ymajorgrids = true,
+        ylabel = {Viewers(\%), Adults over \>18yrs},
+        symbolic x coords={TFC, Lifetime,CNN},
+        xtick = data,
+        scaled y ticks = {0,20,40,60,80},
+        enlarge x limits=0.25,
+        ymin=0,
+        legend cell align=left,
+        legend style={
+                at={(1,1.05)},
+                anchor=south east,
+                column sep=1ex
+        }
+    ]
+        \addplot[style={bblue,fill=bblue,mark=none}]
+            coordinates {(TFC, 39) (Lifetime,37) (CNN,45) };
+
+        \addplot[style={rred,fill=rred,mark=none}]
+             coordinates {(TFC,61) (Lifetime,63) (CNN,55) };
+
+        \legend{Male,Female}
+    \end{axis}
+\end{tikzpicture}
+
+\centering 
+Fig 1.2
+\break
+
+\begin{tabular}{ |p{5cm}|p{5cm}|p {5cm}| } 
+ \hline
+ \textbf{Segmentation Scenarios} & \textbf{Pros} & \textbf{Cons} \\ 
+ \hline
+ \begin{itemize}
+     \item \textbf{Appeal to a cross segment of Fashionalists, Planners \& shoppers, and Situationalists} 
+ \end{itemize} & 
+ \begin{itemize}
+     \item Potential customer base of 80\% (as shown in Fig 1.1)
+     \item Cost effective as TFC would not need to develop different marketing campaigns
+     \item Compared to 2007 base, it will generate \$40mn in terms of net income (i.e. \$94.4-\$54.6 from table 1.3.2.
+ \end{itemize}
+  &
+ \begin{itemize}
+     \item Ad sales forecasted at 10\% drop in Cost per month (i.e from \$2 to \$1.8)
+     \item less effective in differentiating TFC from its competitors.
+     \item not targeting a specific cluster of segment.
+ \end{itemize}\\
+ \hline
+ \begin{itemize}
+     \item \textbf{Focus more on the Fashionalists}
+ \end{itemize} & 
+ \begin{itemize}
+     \item most valuable customers from demographic perspective(women aged 18-34)
+     \item differentiate TFC from competitors as more targeted marketing is possible.
+     \item Compared to 2007 base, it will generate \$96.8mn more in terms of net income (i.e. \$151-\$54.6 from table 1.3.2.
+ \end{itemize} & 
+  \begin{itemize}
+      \item more risky option as it comprise of small segment of customers(i.e.15\%)
+      \item extra investment of \$15mn/yr in new programming would be required in order to attract and retain the interest of this segment.
+      \item customer awareness would not change further decreasing the ratings.
+  \end{itemize}\\ 
+ \hline
+ \begin{itemize}
+     \item \textbf{Targeting two segments- the Fashionistas and the Shoppers/Planners}
+ \end{itemize} &  
+ \begin{itemize}
+     \item large segment of consumer base(i.e. 50\%)
+     \item similar needs are easy to cater
+     \item compared to 2007 base, it will generate \$115mn more in terms of net income (i.e. \$168.8-\$54.6 from table 1.3.2.
+ \end{itemize}
+ & 
+ \begin{itemize}
+     \item Investing in new programming costing additional \$20 million.
+     \item Negative customer perception due to high pricing initially.
+     \item Targeting only half of 50\% of U.S. TV households.
+ \end{itemize}
+ \\ 
+ \hline
+\end{tabular}
+
+\break
+\begin{flushleft}
+\subsection{Expected financial outcome of each scenario:}
+\end{flushleft}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline 
+\textbf{Ad Revenue Calculator} & \textbf{Current} & \textbf{2007 Base} & \textbf{Scenario 1} & \textbf{Scenario 2}  & \textbf{Scenerio 3}\\ 
+\hline
+TV HH & 110,000,000 & 110,000,000 & 110,000,000 &110,000,000 & 110,000,000\\
+\hline
+Avg. Rating(AR)& 1.0\% & 1.0\% & 1.2\% & 0.8\% & 1.2\%\\
+\hline
+Avg. Viewers(AV) = TV HH * AR & 1100 & 1100 & 1320 & 880 & 1320\\
+\hline
+Avg. CPM & \$2.00 & \$1.80 & \$1.80 & \$3.50 & \$2.50\\
+\hline
+Avg. Revenue(AR)= AV* Avg. CPM & \$2,200 & \$1,980 & \$2,376 & \$3,080 & \$3,300\\
+\hline
+Ad Minutes/Week & 2016 & 2016 & 2016 & 2016 & 2016\\
+\hline
+Weeks/Year & 52 & 52 & 52 & 52 & 52\\
+\hline
+Ad Rev. = Avg. CPM*AR*Ad Mins*Weeks & \$230,630,400 & \$207,567,360 & \$249,080,832 & \$322,882,560 & \$345,945,600\\
+\hline
+Incremental Programming Expense & & \$0 & \$0 & \$15,000,000 & \$20,000,000\\
+\hline
+\end{tabular} \break
+* Revenue/Thousand Viewers** calculated by multiplying Average Viewers by Average CPM \break
+%
+\hspace{3cm}
+%
+\centering
+\textbf{Table 1.3.1}\\
+%
+\hspace{2cm}
+%
+\begin{tabular}{ |p{3cm}|l|l|l|l|l|p{2cm}| } 
+ \hline
+ \textbf{Financials} & \textbf{2006 Actual} & \textbf{2007 Base} & \textbf{Scenario 1} & \textbf{Scenario 2} & \textbf{Scenario 3} & \textbf{Assumptions} \\
+ \hline
+ \textbf{Revenue:} & & & & & & \\
+ \hline
+ Ad Sales & \$230,630,400 & \$207,567,360 & \$249,080,832 & \$322,822,560 & \$345,945,600 & \\
+ \hline
+ Affiliate Fees & \$80,000,000 & \$81,600,000 & \$ 81,600,000 & \$81,600,000 & \$81,600,000 & \$Grows 2\%/yr with population\\
+ \hline
+ \textbf{Total revenue} & \$310,630,400 & \$289,167,360 & \$330,680,832 & \$404,482,560 & \$427,545,600 & \\
+ \hline
+ \textbf{Expenses:} & & & & & & \\
+ \hline
+ Cost of Operations & \$70,000,000 & \$72,100,000 & \$72,100,000 & \$72,100,000 
+ & \$72,000,000 & Grows 3\%/yr with inflation\\
+ \hline
+Cost of Programming & \$55,000,000 & \$55,000,000 & \$55,000,000 & \$70,000,000 & \$75,000,000 & \\
+\hline
+ Ad Sales Commissions & \$6,918,912 & \$6,227,021 & \$7,472,425 & \$9,686,477 & \$10,378,368 & 3\% of ad sales revenue \\
+ \hline
+ Marketing \& Advertising & \$45,000,000 & \$60,000,000 & \$60,000,000 & \$60,000,000 & \$60,000,000 & Increased spending of \$15M \\
+ \hline 
+ SGA & \$40,000,000 & \$41,200,000 & \$41,200,000 & \$41,200,000 & \$41,200,000  & Growing with inflation 3\% \\
+ \hline
+ Total Expense: & \$216,918,912 & \$234,527,021 & \$235,772,425 & \$252,986,477 & \$258,678,368 &  \\
+ \hline
+ \textbf{Net Income\break(Expenses-Revenue)} & \$93,711,488 & \$54,640,339 & \$94,908,407 & \$151,496,083 & \$168,867,232 &  \\
+ \hline
+ \textbf{Margin} & 30\% & \textbf{19\%} & \textbf{29\%} & \textbf{37\%} & \textbf{39\%} & \\
+ \hline
+\end{tabular}\\
+
+\hspace{3cm}
+
+\centering
+\textbf{Table 1.3.2}\\
+
+\hspace{5cm}
+
+\begin{flushleft}
+\subsection{Possible solutions:}
+\end{flushrleft}
+\begin{enumerate}
+    \item \textbf Target Fashionalists and Shoppers/Planners:
+    \begin{itemize}
+        \item Profitability is highest(i.e. 39\%)
+        \item Focus on Fashion  special occasions and comfortable clothing (popular among customers).
+    \end{itemize}
+    \item Adopting the segmentation approach after considering all pros and cons 
+    \begin{itemize}
+        \item Opting out Strategy 1 and 2.
+    \end{itemize}
+\end{enumerate}
+
+
+\end{document}
+
+\section{Introduction}
+
+\end{document}
